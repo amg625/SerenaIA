@@ -1,0 +1,229 @@
+/* Variables y Funciones generales*/
+:root{
+    --fuenteHeading: 'Arial', Helvetica, sans-serif;
+    --fuenteParrafos: 'Open Sans', Helvetica, sans-serif;
+
+    --colorAzulClaro: #8cf2de;
+    --colorNegro: #000000;
+    --colorBlanco: #ffffff;
+    --colorBotones: #152b68;
+    --colorFondoTitulos: #178aa3;
+}
+
+/*Cóigo general para el HTML*/
+
+html{
+    box-sizing: border-box;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+/*Herencia de sección anterior*/
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+a{
+    text-decoration: none;
+}
+
+/* Estilo general del body */
+body {
+    font-family: var(--fuenteHeading);
+    font-size: 15px;
+    line-height: 1.5; /* QUe tan separados están los elementos*/
+    background-color: var(--colorBlanco);
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    /*display: flex;
+    height: 100vh;*/
+}
+
+/* Encabezado de la página */
+.header {
+    background-image: url(../images/banner-inicio.jpg);
+    background-color: rgba(0, 0, 0, 0.5); /* Capa semitransparente encima de la imagen */
+    background-blend-mode: overlay; /* Mezcla los colores de fondo e imagen */
+    height: 550px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: var(--colorBlanco);
+    text-align: center;
+    padding: 30px 70px 30px 70px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.motivacion{
+    text-align: center;
+    justify-content: center;
+    font-family: var(--fuenteParrafos);
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--colorBlanco);
+    margin-top: 150px;
+}
+
+
+header ul, header h1 {
+    margin: 0;
+    padding: 5px;
+    list-style: none; /* Para eliminar viñetas*/
+    font-weight: bold;
+    color: white;
+    display: block; /*Alinea los elementos en bloque y quedan en columna, uno abajo de otro*/
+    text-align: center;
+    text-decoration: none;
+}
+
+header a:visited{
+    color: var(--colorBlanco); /*Da el color al texto del link*/
+    text-decoration: none; /* Elimina el subrayado del link*/
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        font-family: var(--fuenteHeading);
+        color: var(--colorBlanco);
+        display: flex; /*Se colocan los elementos uno a lado de otro en la navegacion de enlaces*/
+        gap: 20px; /*Separa entre elementos de flex (Agrega espacios)*/
+    }
+}
+
+.cabecera{
+    display: flex;
+    justify-content: space-between;
+}
+
+h3{
+    text-align: center;
+}
+
+/* Estilo general del contenedor */
+
+    .container {
+        background-color: #98cbd5;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        margin-top: 20px;
+    }  
+
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        justify-content: space-around;
+        column-gap: 70px;
+        padding: 20px 70px 20px 70px;
+    }
+}
+
+.banner{
+    font-family: var(--fuenteHeading);
+    font-size: 14px;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    color: var(--colorNegro);
+    display: flex;
+    justify-content: space-between;
+    background-color: #118172;
+    padding: 5px 60px 5px 60px;
+}
+
+
+@media (min-width: 768px) {
+    .registro-instrucciones{
+        font-family: var(--fuenteParrafos);
+        text-align:left;
+        padding: 2% 30% 2% 30% ;
+    }
+}
+
+
+.parrafo-centrado{
+    text-align: justify;
+}
+/* Estilo del formulario */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para cada grupo del formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilo de las etiquetas */
+label {
+    font-size: 1.1em;
+    color: #4a4a4a;
+}
+
+/* Estilo de los campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f4f4f9;
+}
+
+/* Estilo para el botón de enviar */
+input[type="submit"] {
+    background-color: #00af98;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #818481;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00af98;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #6ab7ff;
+}
+
+
+footer{
+    color: black; /*Color de texto del footer*/
+    background-color: rgb(255, 255, 255); /*Color de fondo, si no estuviese uno definido desde el inicio*/
+    padding: 1%; /*Separación con las secciones de alrededor, en este caso con el texto de la entrada*/
+    text-align: end; /*Alinea hacia la derecha*/
+}
+
+footer a:link, footer a:visited{
+    color: rgb(28, 20, 121); /*Cambia color de los links al dar clic y al no hacerlo*/
+}

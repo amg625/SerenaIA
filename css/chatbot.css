@@ -1,0 +1,117 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #118172;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Estilos para el contenedor de chat */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+.chat-box {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.input-container {
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #6ab7ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #4a90e2;
+}
+
+/* Estilos para los mensajes del usuario y del bot */
+.user-message {
+    background-color: #e0f7fa;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    margin-right: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* Opciones (botones) presentadas por el bot */
+.bot-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-left: 0; /* Se alinean con el mensaje del bot */
+}
+
+.bot-options button {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.bot-options button:hover {
+    background-color: #f2f2f2;
+}

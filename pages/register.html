@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo.ico" type="image/x-icon">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner"">
+            <h1> <a href="../index.html">Serena <span class="bold">IA</span></a></h1>
+            <nav>
+                <ul class="navegacion">
+                  <li><a href="login.html">Iniciar ahora</a></li>
+              </ul>
+          </nav>
+        </div>
+    </header>
+    <main class="registro-instrucciones">
+        <div>
+            <h3>Registro de usuarios</h3>
+            <p class="parrafo-centrado">Te invitamos a registrarte para disfrutar de una experiencia más personalizada con nuestro chatbot. Tus datos serán manejados con estrictos estándares de seguridad y confidencialidad, utilizándose únicamente para mejorar la calidad de las respuestas y brindarte un servicio más acorde a tus necesidades. Tu privacidad es nuestra prioridad.</p>
+        </div>
+    <div class="container">
+        <form action="submit_form.php" method="POST" class="registration-form">
+            <div class="form-group">
+                <label for="name">Nombre completo:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Género:</label>
+                <select id="gender" name="gender" required>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="otro">Otro</option>
+                    <option value="indistinto">Prefiero no decir</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Fecha de nacimiento (dd/mm/aaaa):</label>
+                <input type="text" id="dob" name="dob" pattern="\d{2}/\d{2}/\d{4}" placeholder="dd/mm/aaaa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="job">¿A qué te dedicas?</label>
+                <select id="job" name="job" required>
+                    <option value="trabajo-formal">Trabajo Formal (Sueldo fijo)</option>
+                    <option value="trabajo-informal">Trabajo Informal</option>
+                    <option value="trabajo-estudio">Trabajo y Estudio</option>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="desempleado">Desempleado</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">¿Trabajo remoto o en sitio?</label>
+                <select id="location" name="location" required>
+                    <option value="remoto">Remoto</option>
+                    <option value="hibrido">Híbrido</option>
+                    <option value="en-sitio">Presencial</option>
+                    <option value="no trabajo">No trabajo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="correo@mail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Número de teléfono:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="5512345678" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña (mínimo 8 caracteres, letras o números):</label>
+                <input type="password" id="password" name="password" pattern="[A-Za-z0-9]{8,}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirmar Contraseña:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+
+            <div class="form-group">
+                <a href="login.html" class="btn">Registrarse</a>
+            </div>
+        </form>
+    </div>
+</main>
+</body>
+</html>
